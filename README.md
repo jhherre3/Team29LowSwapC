@@ -12,7 +12,7 @@ Welcome to our senior capstone project: a **Low Size, Weight, Power, and Cost (S
 ---
 # 🚀 Low-SWaP-C Flight Controller (Capstone Project)
 
-🔗 **Live Project Website**: [Click to View](https://your-username.github.io/your-repo-name/)
+🔗 **Live Project Website**: [Click to View]([https://your-username.github.io/your-repo-name/](https://jhherre3.github.io/Team29LowSwapC/))
 
 Welcome to our senior capstone project...
 
