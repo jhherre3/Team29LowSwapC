@@ -43,13 +43,3 @@ Welcome to our senior capstone project: a **Low Size, Weight, Power, and Cost (S
 - Prototyping lightweight UAS
 - Educational use for embedded systems and control theory
 
----
-
-
-## 📁 Repository Contents
-
-- `/hardware/` – PCB designs, schematics, and board documentation
-- `/firmware/` – Codebase for STM32 MCU
-- `/images/` – Photos and visual documentation
-- `/docs/` – Project documentation and resources
-
