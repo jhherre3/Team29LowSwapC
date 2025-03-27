@@ -1,1 +1,125 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Team 29 | Low SWaP-C Flight Controller</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body, h1, h2, h3, h4, h5 {font-family: "Poppins", sans-serif}
+    body {font-size: 16px;}
+    .w3-half img {margin-bottom: -6px; margin-top: 16px; opacity: 0.8; cursor: pointer;}
+    .w3-half img:hover {opacity: 1}
+  </style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Team 29<br>Flight Controller</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a> 
+    <a href="#design" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Design</a> 
+    <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gallery</a> 
+    <a href="#results" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testing</a> 
+    <a href="#imu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">IMU</a> 
+    <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FAQ</a> 
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Team</a>
+  </div>
+</nav>
+
+<!-- Overlay effect -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <div class="w3-container" style="margin-top:80px" id="summary">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are building a Low Size, Weight, Power, and Cost (SWaP-C) flight controller for drone and aerospace systems.</p>
+  </div>
+
+  <div class="w3-container" id="design" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Design Overview</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <ul>
+      <li>MCU: STM32F405</li>
+      <li>IMU: Honeywell I400 MEMS</li>
+      <li>Power: 3.3V and 5V regulation onboard</li>
+      <li>Modular I/O: UART, I2C, PWM</li>
+    </ul>
+  </div>
+
+  <div class="w3-container" id="gallery" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Gallery</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="images/Custom_Flight_Controller_Build.jpg" style="width:100%" alt="Build">
+        <img src="images/coming soon.jpg" style="width:100%" alt="Placeholder">
+      </div>
+      <div class="w3-half">
+        <img src="images/Flight_Controller_FC_29_png_alphares.png" style="width:100%" alt="Main Controller">
+        <img src="images/coming soon.jpg" style="width:100%" alt="Placeholder">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container" id="results" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>[IN PROGRESS] Testing will show sensor output stability, latency, and noise analysis.</p>
+    <img src="images/coming soon.jpg" style="width:100%" alt="Test Data">
+  </div>
+
+  <div class="w3-container" id="imu" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>[IN PROGRESS] This section will include quaternion math, sensor fusion, and orientation visualization.</p>
+    <img src="images/coming soon.jpg" style="width:100%" alt="IMU Demo">
+  </div>
+
+  <div class="w3-container" id="faq" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>FAQ</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p><b>What is an IMU?</b><br>An Inertial Measurement Unit detects acceleration and rotation for navigation.</p>
+    <p><b>What does the barometer do?</b><br>Measures air pressure to estimate altitude.</p>
+    <p><b>What is SWaP-C?</b><br>Size, Weight, Power, and Cost — essential in aerospace systems.</p>
+    <p><b>What microcontroller is used?</b><br>We use the STM32F405 due to its performance and peripheral support.</p>
+    <p><b>What is sensor fusion?</b><br>Combining IMU, barometer, and GPS for accurate flight control data.</p>
+    <p><b>Is the firmware open-source?</b><br>Yes, it's optimized for embedded C/C++ development.</p>
+    <p><b>How does a drone fly?</b><br>Propellers provide lift, sensors provide data, and the flight controller keeps it balanced.</p>
+    <p><b>What makes this different?</b><br>It's small, lightweight, efficient, and designed for modular prototyping and testing.</p>
+  </div>
+
+  <div class="w3-container" id="team" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This project is developed by Team 29 at ASU. Here's our group photo:</p>
+    <img src="images/teampic.png" style="width:100%; border-radius: 8px;">
+  </div>
+</div>
+
+<!-- End Page Content -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+  <p class="w3-right">Powered by Team 29 | W3.CSS Template</p>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
