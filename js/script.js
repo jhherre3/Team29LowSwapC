@@ -1,20 +1,34 @@
-// JS to control collapsible sections and arrow toggles
+/*!
+* Start Bootstrap - Resume v7.0.6 (https://startbootstrap.com/theme/resume)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
+*/
+//
+// Scripts
+// 
 
-document.querySelectorAll(".collapsible").forEach(button => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    const isOpen = content.style.display === "block";
+window.addEventListener('DOMContentLoaded', event => {
 
-    content.style.display = isOpen ? "none" : "block";
-    button.classList.toggle("active", !isOpen);
-  });
+    // Activate Bootstrap scrollspy on the main nav element
+    const sideNav = document.body.querySelector('#sideNav');
+    if (sideNav) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#sideNav',
+            rootMargin: '0px 0px -40%',
+        });
+    };
+
+    // Collapse responsive navbar when toggler is visible
+    const navbarToggler = document.body.querySelector('.navbar-toggler');
+    const responsiveNavItems = [].slice.call(
+        document.querySelectorAll('#navbarResponsive .nav-link')
+    );
+    responsiveNavItems.map(function (responsiveNavItem) {
+        responsiveNavItem.addEventListener('click', () => {
+            if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                navbarToggler.click();
+            }
+        });
+    });
+
 });
-
-// Optional: Back to Top Button
-const backToTopBtn = document.querySelector(".back-to-top");
-if (backToTopBtn) {
-  backToTopBtn.addEventListener("click", e => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
