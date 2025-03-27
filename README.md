@@ -6,7 +6,7 @@ Welcome to our senior capstone project: a **Low Size, Weight, Power, and Cost (S
 
 ## 📸 Current Design
 
-![Flight Controller Image](images/Custom_Flight_Controller_Build.jpg)
+![Flight Controller Image](images/Flight_Controller_FC_29_png_alpha.png)
 
 
 ---
