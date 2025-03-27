@@ -66,7 +66,7 @@ section {
 }
 
 .collapsible-section button.collapsible {
-  background-color: #eee;
+  background: none;
   color: #222;
   cursor: pointer;
   padding: 1rem;
@@ -74,9 +74,25 @@ section {
   text-align: left;
   border: none;
   outline: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.collapsible-section button.collapsible:hover {
+  background: #f1f1f1;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+button.active .arrow {
+  transform: rotate(90deg);
 }
 
 .collapsible-section .content {
@@ -112,6 +128,7 @@ section {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -120,6 +137,7 @@ section {
   padding: 1rem;
   border-radius: 8px;
   flex: 1;
+  min-width: 150px;
   text-align: center;
   font-weight: bold;
 }
@@ -147,4 +165,10 @@ footer {
   border-radius: 50%;
   font-weight: bold;
   font-size: 1.2rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
 }
