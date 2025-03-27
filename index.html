@@ -23,105 +23,108 @@
       <li><a href="#gallery">Gallery</a></li>
       <li><a href="#results">Results</a></li>
       <li><a href="#imu">IMU</a></li>
+      <li><a href="#showcase">Showcase</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#team">Team</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <img src="images/Flight_Controller_FC_29_png_alphares.png" alt="Flight Controller" />
+  <!-- Hero Image -->
+  <section class="hero" id="hero">
+    <img src="images/Flight_Controller_FC_29_png_alphares.png" alt="Flight Controller">
   </section>
 
-  <!-- Summary -->
-  <section id="summary">
-    <h2>Project Summary</h2>
-    <p>This capstone project presents a Low Size, Weight, Power, and Cost (SWaP-C) flight controller designed for UAV and embedded aerospace systems. The goal is to build an efficient, modular, and cost-effective flight control unit for experimental and educational use cases.</p>
+  <!-- Collapsible Sections -->
+  <section id="summary" class="collapsible-section">
+    <button class="collapsible">Summary</button>
+    <div class="content">
+      <p>This project presents a Low SWaP-C flight controller optimized for lightweight UAV systems and embedded applications.</p>
+    </div>
   </section>
 
-  <!-- Design -->
-  <section id="design">
-    <h2>Design Overview</h2>
-    <ul>
-      <li>MCU: STM32F405</li>
-      <li>Sensors: Honeywell I400 IMU, GPS, Barometer</li>
-      <li>Power: 3.3V/5V onboard regulation</li>
-      <li>Interfaces: UART, PWM, I2C</li>
-      <li>Firmware: C/C++, modular, real-time logic</li>
-    </ul>
+  <section id="design" class="collapsible-section">
+    <button class="collapsible">Design</button>
+    <div class="content">
+      <ul>
+        <li>MCU: STM32F405</li>
+        <li>IMU: Honeywell I400</li>
+        <li>Barometer, GPS integration</li>
+        <li>UART, I2C, PWM interfaces</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
+  <section id="gallery" class="collapsible-section">
+    <button class="collapsible">Gallery</button>
+    <div class="content gallery-grid">
       <img src="images/Custom_Flight_Controller_Build.jpg" alt="Build Photo">
-      <img src="images/Flight_Controller_FC_29_png_alpha.png" alt="Design Render">
-      <img src="images/fullim.png" alt="Assembly View">
+      <img src="images/fullim.png" alt="Assembly">
+      <img src="images/coming_soon.jpg" alt="In Progress">
     </div>
   </section>
 
-  <!-- Results -->
-  <section id="results">
-    <h2>Testing & Results</h2>
-    <p>Preliminary tests confirmed stable sensor communication, accurate orientation tracking, and successful signal generation for ESC control. Further performance evaluations are ongoing.</p>
-  </section>
-
-  <!-- IMU Section -->
-  <section id="imu">
-    <h2>IMU Visualization & Math</h2>
-    <p>This section will demonstrate how IMU data (acceleration, angular rate, orientation) is processed in real time. Future updates will include visuals and math breakdowns for sensor fusion and control response.</p>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <button class="faq-question">What is an IMU?</button>
-        <div class="faq-answer">An Inertial Measurement Unit (IMU) detects acceleration and angular motion using accelerometers and gyroscopes. It is crucial for tracking a drone's orientation and movement.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What is a barometer used for?</button>
-        <div class="faq-answer">Barometers measure atmospheric pressure, which helps estimate altitude. In drones, it's used for altitude hold and vertical positioning.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">How does GPS help in flight controllers?</button>
-        <div class="faq-answer">GPS provides global positioning data, enabling navigation, waypoint tracking, and flight path correction.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">How does a drone work?</button>
-        <div class="faq-answer">A drone uses spinning propellers controlled by a flight controller that processes sensor data (like IMU, GPS) to maintain stable flight and respond to commands.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What is SWaP-C?</button>
-        <div class="faq-answer">SWaP-C stands for Size, Weight, Power, and Cost — key factors in designing compact, efficient electronics for aerospace or embedded systems.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Why use an STM32 microcontroller?</button>
-        <div class="faq-answer">STM32s offer high performance, low power consumption, and extensive peripherals, making them ideal for embedded systems like flight controllers.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What kind of firmware is used?</button>
-        <div class="faq-answer">The firmware is written in C/C++ and supports modular design, sensor polling, data fusion, and ESC control. It can be compiled via STM32CubeIDE.</div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">What is sensor fusion?</button>
-        <div class="faq-answer">Sensor fusion combines multiple sensor inputs (IMU, GPS, barometer) to produce accurate orientation and position data in real-time.</div>
-      </div>
+  <section id="results" class="collapsible-section">
+    <button class="collapsible">Testing Results</button>
+    <div class="content">
+      <p>[IN PROGRESS] Testing data will include sensor output stability, latency, and noise characterization.</p>
+      <img src="images/coming_soon.jpg" alt="Test Data">
     </div>
   </section>
 
-  <!-- Team -->
-  <section id="team">
-    <h2>Meet the Team</h2>
-    <p><strong>Team 29</strong> – A multidisciplinary engineering team from Arizona State University specializing in embedded systems, aerospace, and control engineering.</p>
+  <section id="imu" class="collapsible-section">
+    <button class="collapsible">IMU Math & Visualization</button>
+    <div class="content">
+      <p>[IN PROGRESS] This section will include visualizations of IMU readings and explain how quaternion/rotation matrices apply.</p>
+      <img src="images/coming_soon.jpg" alt="IMU Data Demo">
+    </div>
+  </section>
+
+  <section id="showcase" class="collapsible-section">
+    <button class="collapsible">Showcase</button>
+    <div class="content">
+      <div class="code-demo">
+        <pre><code>// Placeholder C++ snippet
+void loop() {
+  readIMU();
+  updateOrientation();
+  stabilize();
+}</code></pre>
+      </div>
+      <div class="cards">
+        <div class="card">Modular IO</div>
+        <div class="card">Low Power Design</div>
+        <div class="card">Real-Time Firmware</div>
+      </div>
+      <img src="images/coming_soon.jpg" alt="Visual Showcase">
+    </div>
+  </section>
+
+  <section id="faq" class="collapsible-section">
+    <button class="collapsible">FAQ</button>
+    <div class="content">
+      <div class="faq-item"><strong>What is an IMU?</strong><p>An Inertial Measurement Unit detects acceleration and angular velocity.</p></div>
+      <div class="faq-item"><strong>What is a barometer used for?</strong><p>It measures atmospheric pressure to estimate altitude.</p></div>
+      <div class="faq-item"><strong>How does GPS help in drones?</strong><p>It provides real-time location for navigation and waypoint following.</p></div>
+      <div class="faq-item"><strong>How does a drone work?</strong><p>By using propellers, sensors, and a flight controller to remain balanced and follow commands.</p></div>
+      <div class="faq-item"><strong>What is SWaP-C?</strong><p>Size, Weight, Power, and Cost — critical in aerospace design.</p></div>
+      <div class="faq-item"><strong>Why use STM32?</strong><p>It's reliable, efficient, and powerful for embedded systems.</p></div>
+      <div class="faq-item"><strong>What firmware is used?</strong><p>C/C++ firmware with real-time control loop.</p></div>
+      <div class="faq-item"><strong>What is sensor fusion?</strong><p>Combining sensor data to produce reliable orientation and position estimates.</p></div>
+    </div>
+  </section>
+
+  <section id="team" class="collapsible-section">
+    <button class="collapsible">Team</button>
+    <div class="content">
+      <p><strong>Team 29 – ASU Engineering Capstone</strong></p>
+      <img src="images/teampic.png" alt="Team Photo" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
+    </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 Team 29 | ASU Engineering | Honeywell Collaboration</p>
-    <a href="#hero" class="back-to-top">↑ Back to Top</a>
+    <p>© 2025 Team 29 | ASU | Honeywell</p>
+    <a href="#hero" class="back-to-top">↑</a>
   </footer>
 
 </body>
