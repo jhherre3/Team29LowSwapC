@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Navigation -->
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo-title">
       <img src="images/ASU-Logo.jpg" alt="ASU Logo" class="nav-logo" />
@@ -29,21 +29,24 @@
     </ul>
   </nav>
 
-  <!-- Hero Image -->
+  <!-- Hero Section -->
   <section class="hero" id="hero">
-    <img src="images/Flight_Controller_FC_29_png_alphares.png" alt="Flight Controller">
+    <img src="images/Flight_Controller_FC_29_png_alphares.png" alt="Flight Controller" />
   </section>
 
   <!-- Collapsible Sections -->
+
+  <!-- Copy & paste this structure below to add new sections -->
   <section id="summary" class="collapsible-section">
-    <button class="collapsible">Summary</button>
+    <button class="collapsible"><span class="arrow">▶</span> Summary</button>
     <div class="content">
       <p>This project presents a Low SWaP-C flight controller optimized for lightweight UAV systems and embedded applications.</p>
     </div>
   </section>
+  <hr />
 
   <section id="design" class="collapsible-section">
-    <button class="collapsible">Design</button>
+    <button class="collapsible"><span class="arrow">▶</span> Design</button>
     <div class="content">
       <ul>
         <li>MCU: STM32F405</li>
@@ -53,34 +56,38 @@
       </ul>
     </div>
   </section>
+  <hr />
 
   <section id="gallery" class="collapsible-section">
-    <button class="collapsible">Gallery</button>
+    <button class="collapsible"><span class="arrow">▶</span> Gallery</button>
     <div class="content gallery-grid">
       <img src="images/Custom_Flight_Controller_Build.jpg" alt="Build Photo">
       <img src="images/fullim.png" alt="Assembly">
-      <img src="images/coming_soon.jpg" alt="In Progress">
+      <img src="images/coming soon.jpg" alt="In Progress">
     </div>
   </section>
+  <hr />
 
   <section id="results" class="collapsible-section">
-    <button class="collapsible">Testing Results</button>
+    <button class="collapsible"><span class="arrow">▶</span> Testing Results</button>
     <div class="content">
       <p>[IN PROGRESS] Testing data will include sensor output stability, latency, and noise characterization.</p>
-      <img src="images/coming_soon.jpg" alt="Test Data">
+      <img src="images/coming soon.jpg" alt="Test Data">
     </div>
   </section>
+  <hr />
 
   <section id="imu" class="collapsible-section">
-    <button class="collapsible">IMU Math & Visualization</button>
+    <button class="collapsible"><span class="arrow">▶</span> IMU Math & Visualization</button>
     <div class="content">
       <p>[IN PROGRESS] This section will include visualizations of IMU readings and explain how quaternion/rotation matrices apply.</p>
-      <img src="images/coming_soon.jpg" alt="IMU Data Demo">
+      <img src="images/coming soon.jpg" alt="IMU Data Demo">
     </div>
   </section>
+  <hr />
 
   <section id="showcase" class="collapsible-section">
-    <button class="collapsible">Showcase</button>
+    <button class="collapsible"><span class="arrow">▶</span> Showcase</button>
     <div class="content">
       <div class="code-demo">
         <pre><code>// Placeholder C++ snippet
@@ -95,12 +102,13 @@ void loop() {
         <div class="card">Low Power Design</div>
         <div class="card">Real-Time Firmware</div>
       </div>
-      <img src="images/coming_soon.jpg" alt="Visual Showcase">
+      <img src="images/coming soon.jpg" alt="Visual Showcase">
     </div>
   </section>
+  <hr />
 
   <section id="faq" class="collapsible-section">
-    <button class="collapsible">FAQ</button>
+    <button class="collapsible"><span class="arrow">▶</span> FAQ</button>
     <div class="content">
       <div class="faq-item"><strong>What is an IMU?</strong><p>An Inertial Measurement Unit detects acceleration and angular velocity.</p></div>
       <div class="faq-item"><strong>What is a barometer used for?</strong><p>It measures atmospheric pressure to estimate altitude.</p></div>
@@ -112,16 +120,19 @@ void loop() {
       <div class="faq-item"><strong>What is sensor fusion?</strong><p>Combining sensor data to produce reliable orientation and position estimates.</p></div>
     </div>
   </section>
+  <hr />
 
   <section id="team" class="collapsible-section">
-    <button class="collapsible">Team</button>
+    <button class="collapsible"><span class="arrow">▶</span> Team</button>
     <div class="content">
       <p><strong>Team 29 – ASU Engineering Capstone</strong></p>
       <img src="images/teampic.png" alt="Team Photo" style="max-width: 100%; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);" />
+      <!-- COPY & PASTE BELOW TO ADD A NEW TEAM MEMBER'S SECTION -->
+      <!-- <p><strong>New Team Member Name</strong> – Area of contribution</p> -->
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with Back to Top -->
   <footer>
     <p>© 2025 Team 29 | ASU | Honeywell</p>
     <a href="#hero" class="back-to-top">↑</a>
