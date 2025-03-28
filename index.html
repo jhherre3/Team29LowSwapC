@@ -26,7 +26,6 @@
   <div class="w3-bar-block">
     <a href="#summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a> 
     <a href="#design" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Design</a> 
-    <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Gallery</a> 
     <a href="#results" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testing</a> 
     <a href="#imu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">IMU</a> 
     <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FAQ</a> 
@@ -43,6 +42,7 @@
   <div class="w3-container" style="margin-top:80px" id="summary">
     <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/Flight_Controller_FC_29_png_alphares.png" style="display: block; margin: 0 auto; width: 80%;">
     <p><b>Background & Motivation</b><br>
     The rapid growth of Unmanned Aerial Vehicles (UAVs) in industries such as logistics, emergency response, infrastructure inspection, and precision agriculture has created a demand for more efficient, precise, and adaptable flight control systems. While many commercial flight controllers are available, they often suffer from stability issues, high power consumption, and limited customization options, making them unsuitable for mission-critical and cutting-edge applications.</p>
     <p>The Low SWaP (Size, Weight, and Power) Drone Flight Controller was developed to address these challenges, offering a lightweight, power-efficient, and highly modular flight control system.</p>
@@ -62,25 +62,13 @@
     </ul>
   </div>
 
-  <div class="w3-container" id="gallery" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Gallery</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="images/Custom_Flight_Controller_Build.jpg" style="width:100%" alt="Build">
-        <img src="images/coming soon.jpg" style="width:100%" alt="Placeholder">
-      </div>
-      <div class="w3-half">
-        <img src="images/Flight_Controller_FC_29_png_alphares.png" style="width:100%" alt="Main Controller">
-        <img src="images/coming soon.jpg" style="width:100%" alt="Placeholder">
-      </div>
-    </div>
-  </div>
-
   <div class="w3-container" id="results" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>The flight controller met key performance and design objectives. The PCB was successfully fabricated and assembled, integrating the STM32F405 microcontroller, Honeywell I400 IMU, and modular expansion capabilities. A custom sensor fusion algorithm was implemented, achieving stable and accurate UAV navigation data. Power efficiency targets were met, with operational consumption staying below 5W. The firmware framework was designed to support both CircuitPython and STM environments, making the system accessible to a range of developers. USB-C, microSD, and telemetry logging were successfully integrated. Efforts to integrate Betaflight are ongoing, with preliminary compatibility established.</p>
+    <p><b>Testing Setup Photos</b></p>
+    <img src="images/coming soon.jpg" style="width:100%" alt="Test Setup">
+    <img src="images/coming soon.jpg" style="width:100%" alt="Data Capture">
   </div>
 
   <div class="w3-container" id="imu" style="margin-top:75px">
@@ -103,6 +91,7 @@
     <p><b>What makes this different?</b><br>It's small, lightweight, efficient, and designed for modular prototyping and testing.</p>
   </div>
 
+  <!-- Team Section -->
   <div class="w3-container" id="team" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -141,6 +130,7 @@
       </tr>
     </table>
   </div>
+
 </div>
 
 <!-- End Page Content -->
