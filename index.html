@@ -11,6 +11,9 @@
     body {font-size: 16px;}
     .w3-half img {margin-bottom: -6px; margin-top: 16px; opacity: 0.8; cursor: pointer;}
     .w3-half img:hover {opacity: 1}
+    table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+    th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+    th {background-color: #f44336; color: white;}
   </style>
 </head>
 <body>
@@ -40,17 +43,22 @@
   <div class="w3-container" style="margin-top:80px" id="summary">
     <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>We are building a Low Size, Weight, Power, and Cost (SWaP-C) flight controller for drone and aerospace systems.</p>
+    <p><b>Background & Motivation</b><br>
+    The rapid growth of Unmanned Aerial Vehicles (UAVs) in industries such as logistics, emergency response, infrastructure inspection, and precision agriculture has created a demand for more efficient, precise, and adaptable flight control systems. While many commercial flight controllers are available, they often suffer from stability issues, high power consumption, and limited customization options, making them unsuitable for mission-critical and cutting-edge applications.</p>
+    <p>The Low SWaP (Size, Weight, and Power) Drone Flight Controller was developed to address these challenges, offering a lightweight, power-efficient, and highly modular flight control system.</p>
   </div>
 
   <div class="w3-container" id="design" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Design Overview</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>System Architecture</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <ul>
-      <li>MCU: STM32F405</li>
-      <li>IMU: Honeywell I400 MEMS</li>
-      <li>Power: 3.3V and 5V regulation onboard</li>
-      <li>Modular I/O: UART, I2C, PWM</li>
+      <li><b>Microcontroller (STM32F405):</b> Executes real-time flight computations and supports CircuitPython/STM environments.</li>
+      <li><b>Honeywell I400 MEMS IMU:</b> Provides precise inertial measurements; detachable for calibration.</li>
+      <li><b>USB-C Interface:</b> Enables firmware updates and telemetry.</li>
+      <li><b>MicroSD Storage:</b> Logs diagnostics and sensor data.</li>
+      <li><b>HMC5883L Magnetometer:</b> Provides accurate heading data.</li>
+      <li><b>Flash Memory:</b> Stores firmware and system data.</li>
+      <li><b>Power Management:</b> Efficient consumption (≤5W), stable regulation.</li>
     </ul>
   </div>
 
@@ -72,8 +80,7 @@
   <div class="w3-container" id="results" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>[IN PROGRESS] Testing will show sensor output stability, latency, and noise analysis.</p>
-    <img src="images/coming soon.jpg" style="width:100%" alt="Test Data">
+    <p>The flight controller met key performance and design objectives. The PCB was successfully fabricated and assembled, integrating the STM32F405 microcontroller, Honeywell I400 IMU, and modular expansion capabilities. A custom sensor fusion algorithm was implemented, achieving stable and accurate UAV navigation data. Power efficiency targets were met, with operational consumption staying below 5W. The firmware framework was designed to support both CircuitPython and STM environments, making the system accessible to a range of developers. USB-C, microSD, and telemetry logging were successfully integrated. Efforts to integrate Betaflight are ongoing, with preliminary compatibility established.</p>
   </div>
 
   <div class="w3-container" id="imu" style="margin-top:75px">
@@ -101,6 +108,38 @@
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>This project is developed by Team 29 at ASU. Here's our group photo:</p>
     <img src="images/teampic.png" style="width:100%; border-radius: 8px;">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Contributions</th>
+      </tr>
+      <tr>
+        <td>Ethan Y.</td>
+        <td>Firmware</td>
+        <td>Tested and debugged firmware, worked on protocol research.</td>
+      </tr>
+      <tr>
+        <td>Anthony A.</td>
+        <td>Firmware</td>
+        <td>Developed firmware, tested SD card logging, integrated sensors.</td>
+      </tr>
+      <tr>
+        <td>Tristin R.</td>
+        <td>Case Design</td>
+        <td>Created enclosure layout, selected materials, produced CAD models.</td>
+      </tr>
+      <tr>
+        <td>Jeremiah H.</td>
+        <td>Hardware</td>
+        <td>Led sensor integration, PCB prototyping, and testing strategy.</td>
+      </tr>
+      <tr>
+        <td>Saif E.</td>
+        <td>Support & Research</td>
+        <td>Provided research, documented subsystems, supported across redesigns.</td>
+      </tr>
+    </table>
   </div>
 </div>
 
@@ -114,7 +153,6 @@ function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
 }
-
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
