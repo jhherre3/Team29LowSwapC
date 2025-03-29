@@ -58,11 +58,7 @@
 <div class="w3-main" style="margin-left:300px;margin-right:40px">
 
 
-  <div class="w3-container" id="design" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>System Design</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>This section will detail the full design overview of the flight controller system architecture including layout, component integration, and modularity benefits. [Details will be added soon]</p>
-  </div>
+  
 
   <div class="w3-container" style="margin-top:80px" id="summary">
     <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
@@ -96,22 +92,26 @@
     <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
     <p>Each axis (X, Y, Z) was held stationary for 10 minutes with data logged through the STM32 while powered via USB.</p>
 
+    <div class="side-by-side">
+  <div>
     <h3>X-Axis Test</h3>
     <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
     <pre><code>// Placeholder - X Axis Logging
 print("Logging IMU X-axis")</code></pre>
-
+  </div>
+  <div>
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
-    <img src="images/coming soon.jpg" alt="Y Axis Results">
     <pre><code>// Placeholder - Y Axis Logging
 print("Logging IMU Y-axis")</code></pre>
-
+  </div>
+  <div>
     <h3>Z-Axis Test</h3>
     <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
-    <img src="images/coming soon.jpg" alt="Z Axis Results">
     <pre><code>// Placeholder - Z Axis Logging
 print("Logging IMU Z-axis")</code></pre>
+  </div>
+</div>
 
     <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
     <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
