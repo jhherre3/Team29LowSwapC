@@ -1,153 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Team 29 | Low SWaP-C Flight Controller</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <style>
-    body, h1, h2, h3, h4, h5 {font-family: "Poppins", sans-serif}
-    body {font-size: 16px;}
-    .w3-half img {margin-bottom: -6px; margin-top: 16px; opacity: 0.8; cursor: pointer;}
-    .w3-half img:hover {opacity: 1}
-    table {width: 100%; border-collapse: collapse; margin-top: 20px;}
-    th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
-    th {background-color: #f44336; color: white;}
-  </style>
-</head>
-<body>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Team 29<br>Flight Controller</b></h3>
+<!-- Replace your full <div class="w3-container" id="summary"> to </div> and so on... with this -->
+<!-- Summary Section -->
+<div class="w3-container" style="margin-top:80px" id="summary">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <div class="w3-row">
+    <div class="w3-half">
+      <img src="images/Flight_Controller_FC_29_png_alphares.png" style="width:100%" alt="Current Project">
+    </div>
+    <div class="w3-half">
+      <img src="images/coming soon.jpg" style="width:100%" alt="Coming Soon">
+    </div>
   </div>
-  <div class="w3-bar-block">
-    <a href="#summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a> 
-    <a href="#design" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Design</a> 
-    <a href="#results" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testing</a> 
-    <a href="#imu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">IMU</a> 
-    <a href="#faq" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">FAQ</a> 
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Team</a>
-  </div>
-</nav>
-
-<!-- Overlay effect -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- Page Content -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <div class="w3-container" style="margin-top:80px" id="summary">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <img src="images/Flight_Controller_FC_29_png_alphares.png" style="display: block; margin: 0 auto; width: 60%; object-fit: cover; object-position: center;">
-    <p><b>Background & Motivation</b><br>
+  <p><b>Background & Motivation</b><br>
     The rapid growth of Unmanned Aerial Vehicles (UAVs) in industries such as logistics, emergency response, infrastructure inspection, and precision agriculture has created a demand for more efficient, precise, and adaptable flight control systems. While many commercial flight controllers are available, they often suffer from stability issues, high power consumption, and limited customization options, making them unsuitable for mission-critical and cutting-edge applications.</p>
-    <p>The Low SWaP (Size, Weight, and Power) Drone Flight Controller was developed to address these challenges, offering a lightweight, power-efficient, and highly modular flight control system.</p>
-  </div>
-
-  <div class="w3-container" id="design" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>System Architecture</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <ul>
-      <li><b>Microcontroller (STM32F405):</b> Executes real-time flight computations and supports CircuitPython/STM environments.</li>
-      <li><b>Honeywell I400 MEMS IMU:</b> Provides precise inertial measurements; detachable for calibration.</li>
-      <li><b>USB-C Interface:</b> Enables firmware updates and telemetry.</li>
-      <li><b>MicroSD Storage:</b> Logs diagnostics and sensor data.</li>
-      <li><b>HMC5883L Magnetometer:</b> Provides accurate heading data.</li>
-      <li><b>Flash Memory:</b> Stores firmware and system data.</li>
-      <li><b>Power Management:</b> Efficient consumption (≤5W), stable regulation.</li>
-    </ul>
-  </div>
-
-  <div class="w3-container" id="results" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>The flight controller met key performance and design objectives. The PCB was successfully fabricated and assembled, integrating the STM32F405 microcontroller, Honeywell I400 IMU, and modular expansion capabilities. A custom sensor fusion algorithm was implemented, achieving stable and accurate UAV navigation data. Power efficiency targets were met, with operational consumption staying below 5W. The firmware framework was designed to support both CircuitPython and STM environments, making the system accessible to a range of developers. USB-C, microSD, and telemetry logging were successfully integrated. Efforts to integrate Betaflight are ongoing, with preliminary compatibility established.</p>
-    <p><b>Testing Setup Photos</b></p>
-    <img src="images/coming soon.jpg" style="width:100%" alt="Test Setup">
-    <img src="images/coming soon.jpg" style="width:100%" alt="Data Capture">
-  </div>
-
-  <div class="w3-container" id="imu" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>[IN PROGRESS] This section will include quaternion math, sensor fusion, and orientation visualization.</p>
-    <img src="images/coming soon.jpg" style="width:100%" alt="IMU Demo">
-  </div>
-
-  <div class="w3-container" id="faq" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>FAQ</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p><b>What is an IMU?</b><br>An Inertial Measurement Unit detects acceleration and rotation for navigation.</p>
-    <p><b>What does the barometer do?</b><br>Measures air pressure to estimate altitude.</p>
-    <p><b>What is SWaP-C?</b><br>Size, Weight, Power, and Cost — essential in aerospace systems.</p>
-    <p><b>What microcontroller is used?</b><br>We use the STM32F405 due to its performance and peripheral support.</p>
-    <p><b>What is sensor fusion?</b><br>Combining IMU, barometer, and GPS for accurate flight control data.</p>
-    <p><b>Is the firmware open-source?</b><br>Yes, it's optimized for embedded C/C++ development.</p>
-    <p><b>How does a drone fly?</b><br>Propellers provide lift, sensors provide data, and the flight controller keeps it balanced.</p>
-    <p><b>What makes this different?</b><br>It's small, lightweight, efficient, and designed for modular prototyping and testing.</p>
-  </div>
-
-  <!-- Team Section -->
-  <div class="w3-container" id="team" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>This project is developed by Team 29 at ASU. Here's our group photo:</p>
-    <img src="images/teampic.png" style="width:100%; border-radius: 8px;">
-    <table>
-      <tr>
-        <th>Name</th>
-        <th>Role</th>
-        <th>Contributions</th>
-      </tr>
-      <tr>
-        <td>Ethan Y.</td>
-        <td>Firmware</td>
-        <td>Tested and debugged firmware, worked on protocol research.</td>
-      </tr>
-      <tr>
-        <td>Anthony A.</td>
-        <td>Firmware</td>
-        <td>Developed firmware, tested SD card logging, integrated sensors.</td>
-      </tr>
-      <tr>
-        <td>Tristin R.</td>
-        <td>Case Design</td>
-        <td>Created enclosure layout, selected materials, produced CAD models.</td>
-      </tr>
-      <tr>
-        <td>Jeremiah H.</td>
-        <td>Hardware</td>
-        <td>Led sensor integration, PCB prototyping, and testing strategy.</td>
-      </tr>
-      <tr>
-        <td>Saif E.</td>
-        <td>Support & Research</td>
-        <td>Provided research, documented subsystems, supported across redesigns.</td>
-      </tr>
-    </table>
-  </div>
-
+  <p>The Low SWaP (Size, Weight, and Power) Drone Flight Controller was developed to address these challenges, offering a lightweight, power-efficient, and highly modular flight control system.</p>
 </div>
 
-<!-- End Page Content -->
-<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-  <p class="w3-right">Powered by Team 29 | W3.CSS Template</p>
+<!-- Testing Results -->
+<div class="w3-container" id="results" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  
+  <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
+  <p>We tested acceleration on the X, Y, and Z axes using a stationary fixture that held the board in a fixed orientation for each direction. Data was logged using the STM32F405 for a 10-minute duration while powered via USB.</p>
+
+  <!-- Axis Test Template -->
+  <h3 class="w3-large w3-text-red">X-Axis Test</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Test Setup"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Results"></div>
+  </div>
+  <pre><code>// Acceleration Logging - X Axis (Placeholder)
+# TODO: insert actual data logging script
+print("Logging acceleration on X-Axis")</code></pre>
+
+  <h3 class="w3-large w3-text-red">Y-Axis Test</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Test Setup"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Results"></div>
+  </div>
+  <pre><code>// Acceleration Logging - Y Axis (Placeholder)
+print("Logging acceleration on Y-Axis")</code></pre>
+
+  <h3 class="w3-large w3-text-red">Z-Axis Test</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Test Setup"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Results"></div>
+  </div>
+  <pre><code>// Acceleration Logging - Z Axis (Placeholder)
+print("Logging acceleration on Z-Axis")</code></pre>
 </div>
 
-<script>
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
-</script>
+<!-- IMU Math & Visualization -->
+<div class="w3-container" id="imu" style="margin-top:75px">
+  <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
+  <hr style="width:50px;border:5px solid red" class="w3-round">
+  <p>Acceleration data is a key indicator of IMU reliability. Since gravitational acceleration is a known constant (~9.81 m/s²), it can be used to validate sensor accuracy and drift. Visualizing the accelerometer's response over time provides a first look at IMU stability.</p>
+  <p>Upcoming additions will expand from acceleration to linear velocity (m/s) estimation by integrating acceleration data over time. This will allow motion tracking and help quantify noise across dynamic tests.</p>
+  <img src="images/coming soon.jpg" style="width:100%" alt="IMU Math Demo">
+</div>
 
-</body>
-</html>
+<!-- Velocity Test Placeholder -->
+<div class="w3-container" style="margin-top:75px">
+  <h2 class="w3-xlarge w3-text-red">Future Testing – Linear Velocity</h2>
+  <p>Linear velocity tests will involve dynamic motion across all axes. Each test will use timed movements over fixed distances to validate calculated velocity from integrated acceleration data.</p>
+
+  <h3 class="w3-large w3-text-red">X-Axis Velocity</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Velocity Test"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Velocity Result"></div>
+  </div>
+  <pre><code>// Velocity Estimation - X Axis (Placeholder)
+# Integration method will be added here
+print("Integrating acceleration for X velocity")</code></pre>
+
+  <h3 class="w3-large w3-text-red">Y-Axis Velocity</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Velocity Test"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Velocity Result"></div>
+  </div>
+  <pre><code>// Velocity Estimation - Y Axis (Placeholder)
+print("Integrating acceleration for Y velocity")</code></pre>
+
+  <h3 class="w3-large w3-text-red">Z-Axis Velocity</h3>
+  <div class="w3-row">
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Velocity Test"></div>
+    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Velocity Result"></div>
+  </div>
+  <pre><code>// Velocity Estimation - Z Axis (Placeholder)
+print("Integrating acceleration for Z velocity")</code></pre>
+</div>
