@@ -18,6 +18,18 @@
       height: 250px;
       width: auto;
     }
+    .side-by-side {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+    .side-by-side img {
+      height: 300px;
+      width: auto;
+      max-width: 48%;
+      object-fit: cover;
+    }
     table {width: 100%; border-collapse: collapse; margin-top: 20px;}
     th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
     th {background-color: #f44336; color: white;}
@@ -60,6 +72,16 @@
     The rapid growth of UAVs in logistics, emergency response, inspection, and agriculture requires efficient, precise, and modular flight control systems. Most commercial systems are limited by power inefficiency and lack of customization. Our Low SWaP-C flight controller addresses these concerns with an STM32F405-based system designed for adaptability and modular testing.</p>
   </div>
 
+  <div class="w3-container" id="imu" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Acceleration is a strong indicator of IMU accuracy. Because gravity is constant (~9.81 m/s²), it provides a reference when the device is stationary. Our upcoming visualizations will compare raw acceleration data with expected baseline values. Velocity will be estimated by discrete integration in follow-up testing.</p>
+    <div class="side-by-side">
+      <img src="images/test/IMU test GIF.gif" alt="IMU Demo GIF">
+      <img src="images/test/test for x g constant.jpg" alt="IMU Accel Snapshot">
+    </div>
+  </div>
+
   <div class="w3-container" id="results" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -68,7 +90,6 @@
     <p>Each axis (X, Y, Z) was held stationary for 10 minutes with data logged through the STM32 while powered via USB.</p>
 
     <h3>X-Axis Test</h3>
-    <img src="images/test/IMU test GIF.gif" alt="X Axis Test">
     <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
     <pre><code>// Placeholder - X Axis Logging
 print("Logging IMU X-axis")</code></pre>
@@ -105,13 +126,6 @@ print("Integrating IMU Y for velocity")</code></pre>
     <img src="images/coming soon.jpg" alt="Z Velocity Result">
     <pre><code>// Placeholder - Z Velocity Calc
 print("Integrating IMU Z for velocity")</code></pre>
-  </div>
-
-  <div class="w3-container" id="imu" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
-    <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>Acceleration is a strong indicator of IMU accuracy. Because gravity is constant (~9.81 m/s²), it provides a reference when the device is stationary. Our upcoming visualizations will compare raw acceleration data with expected baseline values. Velocity will be estimated by discrete integration in follow-up testing.</p>
-    <img src="images/coming soon.jpg" alt="IMU Visualization">
   </div>
 
   <!-- Team Section -->
