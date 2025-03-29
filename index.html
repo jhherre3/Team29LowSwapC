@@ -1,92 +1,144 @@
-<!-- Replace your full <div class="w3-container" id="summary"> to </div> and so on... with this -->
-<!-- Summary Section -->
-<div class="w3-container" style="margin-top:80px" id="summary">
-  <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  <div class="w3-row">
-    <div class="w3-half">
-      <img src="images/Flight_Controller_FC_29_png_alphares.png" style="width:100%" alt="Current Project">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Team 29 | Low SWaP-C Flight Controller</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <style>
+    body, h1, h2, h3, h4, h5 {font-family: "Poppins", sans-serif;}
+    body {font-size: 16px;}
+    img {max-width: 100%; height: auto; display: block; margin: 10px auto; border-radius: 8px;}
+    .w3-half img:hover {opacity: 1}
+    table {width: 100%; border-collapse: collapse; margin-top: 20px;}
+    th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
+    th {background-color: #f44336; color: white;}
+    pre {background: #f4f4f4; padding: 10px; overflow-x: auto;}
+  </style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar">
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Team 29<br>Flight Controller</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#summary" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Summary</a>
+    <a href="#design" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Design</a>
+    <a href="#results" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testing</a>
+    <a href="#imu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">IMU</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Team</a>
+  </div>
+</nav>
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Page Content -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <div class="w3-container" style="margin-top:80px" id="summary">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <div class="w3-row">
+      <div class="w3-half">
+        <img src="images/Flight_Controller_FC_29_png_alphares.png" alt="Flight Controller">
+      </div>
+      <div class="w3-half">
+        <img src="images/coming soon.jpg" alt="Coming Soon">
+      </div>
     </div>
-    <div class="w3-half">
-      <img src="images/coming soon.jpg" style="width:100%" alt="Coming Soon">
-    </div>
+    <p><b>Background & Motivation</b><br>
+    The rapid growth of UAVs in logistics, emergency response, inspection, and agriculture requires efficient, precise, and modular flight control systems. Most commercial systems are limited by power inefficiency and lack of customization. Our Low SWaP-C flight controller addresses these concerns with an STM32F405-based system designed for adaptability and modular testing.</p>
   </div>
-  <p><b>Background & Motivation</b><br>
-    The rapid growth of Unmanned Aerial Vehicles (UAVs) in industries such as logistics, emergency response, infrastructure inspection, and precision agriculture has created a demand for more efficient, precise, and adaptable flight control systems. While many commercial flight controllers are available, they often suffer from stability issues, high power consumption, and limited customization options, making them unsuitable for mission-critical and cutting-edge applications.</p>
-  <p>The Low SWaP (Size, Weight, and Power) Drone Flight Controller was developed to address these challenges, offering a lightweight, power-efficient, and highly modular flight control system.</p>
+
+  <div class="w3-container" id="results" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+
+    <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
+    <p>Each axis (X, Y, Z) was held stationary for 10 minutes with data logged through the STM32 while powered via USB.</p>
+
+    <h3>X-Axis Test</h3>
+    <img src="images/coming soon.jpg" alt="X Axis Test">
+    <img src="images/coming soon.jpg" alt="X Axis Results">
+    <pre><code>// Placeholder - X Axis Logging
+print("Logging IMU X-axis")</code></pre>
+
+    <h3>Y-Axis Test</h3>
+    <img src="images/coming soon.jpg" alt="Y Axis Test">
+    <img src="images/coming soon.jpg" alt="Y Axis Results">
+    <pre><code>// Placeholder - Y Axis Logging
+print("Logging IMU Y-axis")</code></pre>
+
+    <h3>Z-Axis Test</h3>
+    <img src="images/coming soon.jpg" alt="Z Axis Test">
+    <img src="images/coming soon.jpg" alt="Z Axis Results">
+    <pre><code>// Placeholder - Z Axis Logging
+print("Logging IMU Z-axis")</code></pre>
+
+    <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
+    <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
+
+    <h3>X-Axis Velocity</h3>
+    <img src="images/coming soon.jpg" alt="X Velocity Test">
+    <img src="images/coming soon.jpg" alt="X Velocity Result">
+    <pre><code>// Placeholder - X Velocity Calc
+print("Integrating IMU X for velocity")</code></pre>
+
+    <h3>Y-Axis Velocity</h3>
+    <img src="images/coming soon.jpg" alt="Y Velocity Test">
+    <img src="images/coming soon.jpg" alt="Y Velocity Result">
+    <pre><code>// Placeholder - Y Velocity Calc
+print("Integrating IMU Y for velocity")</code></pre>
+
+    <h3>Z-Axis Velocity</h3>
+    <img src="images/coming soon.jpg" alt="Z Velocity Test">
+    <img src="images/coming soon.jpg" alt="Z Velocity Result">
+    <pre><code>// Placeholder - Z Velocity Calc
+print("Integrating IMU Z for velocity")</code></pre>
+  </div>
+
+  <div class="w3-container" id="imu" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Acceleration is a strong indicator of IMU accuracy. Because gravity is constant (~9.81 m/s²), it provides a reference when the device is stationary. Our upcoming visualizations will compare raw acceleration data with expected baseline values. Velocity will be estimated by discrete integration in follow-up testing.</p>
+    <img src="images/coming soon.jpg" alt="IMU Visualization">
+  </div>
+
+  <!-- Team Section -->
+  <div class="w3-container" id="team" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <img src="images/teampic.png" alt="Team Photo">
+    <table>
+      <tr><th>Name</th><th>Role</th><th>Contributions</th></tr>
+      <tr><td>Ethan Y.</td><td>Firmware</td><td>Debugged firmware, protocol research</td></tr>
+      <tr><td>Anthony A.</td><td>Firmware</td><td>Sensor integration, SD logging</td></tr>
+      <tr><td>Tristin R.</td><td>Case Design</td><td>CAD, enclosure prototyping</td></tr>
+      <tr><td>Jeremiah H.</td><td>Hardware</td><td>Sensor testing, PCB design</td></tr>
+      <tr><td>Saif E.</td><td>Support</td><td>Subsystem documentation</td></tr>
+    </table>
+  </div>
+
 </div>
 
-<!-- Testing Results -->
-<div class="w3-container" id="results" style="margin-top:75px">
-  <h1 class="w3-xxxlarge w3-text-red"><b>Testing Results</b></h1>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  
-  <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
-  <p>We tested acceleration on the X, Y, and Z axes using a stationary fixture that held the board in a fixed orientation for each direction. Data was logged using the STM32F405 for a 10-minute duration while powered via USB.</p>
-
-  <!-- Axis Test Template -->
-  <h3 class="w3-large w3-text-red">X-Axis Test</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Test Setup"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Results"></div>
-  </div>
-  <pre><code>// Acceleration Logging - X Axis (Placeholder)
-# TODO: insert actual data logging script
-print("Logging acceleration on X-Axis")</code></pre>
-
-  <h3 class="w3-large w3-text-red">Y-Axis Test</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Test Setup"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Results"></div>
-  </div>
-  <pre><code>// Acceleration Logging - Y Axis (Placeholder)
-print("Logging acceleration on Y-Axis")</code></pre>
-
-  <h3 class="w3-large w3-text-red">Z-Axis Test</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Test Setup"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Results"></div>
-  </div>
-  <pre><code>// Acceleration Logging - Z Axis (Placeholder)
-print("Logging acceleration on Z-Axis")</code></pre>
+<!-- Footer -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+  <p class="w3-right">Powered by Team 29 | W3.CSS Template</p>
 </div>
 
-<!-- IMU Math & Visualization -->
-<div class="w3-container" id="imu" style="margin-top:75px">
-  <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  <p>Acceleration data is a key indicator of IMU reliability. Since gravitational acceleration is a known constant (~9.81 m/s²), it can be used to validate sensor accuracy and drift. Visualizing the accelerometer's response over time provides a first look at IMU stability.</p>
-  <p>Upcoming additions will expand from acceleration to linear velocity (m/s) estimation by integrating acceleration data over time. This will allow motion tracking and help quantify noise across dynamic tests.</p>
-  <img src="images/coming soon.jpg" style="width:100%" alt="IMU Math Demo">
-</div>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
-<!-- Velocity Test Placeholder -->
-<div class="w3-container" style="margin-top:75px">
-  <h2 class="w3-xlarge w3-text-red">Future Testing – Linear Velocity</h2>
-  <p>Linear velocity tests will involve dynamic motion across all axes. Each test will use timed movements over fixed distances to validate calculated velocity from integrated acceleration data.</p>
-
-  <h3 class="w3-large w3-text-red">X-Axis Velocity</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Velocity Test"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="X Axis Velocity Result"></div>
-  </div>
-  <pre><code>// Velocity Estimation - X Axis (Placeholder)
-# Integration method will be added here
-print("Integrating acceleration for X velocity")</code></pre>
-
-  <h3 class="w3-large w3-text-red">Y-Axis Velocity</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Velocity Test"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Y Axis Velocity Result"></div>
-  </div>
-  <pre><code>// Velocity Estimation - Y Axis (Placeholder)
-print("Integrating acceleration for Y velocity")</code></pre>
-
-  <h3 class="w3-large w3-text-red">Z-Axis Velocity</h3>
-  <div class="w3-row">
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Velocity Test"></div>
-    <div class="w3-half"><img src="images/coming soon.jpg" style="width:100%" alt="Z Axis Velocity Result"></div>
-  </div>
-  <pre><code>// Velocity Estimation - Z Axis (Placeholder)
-print("Integrating acceleration for Z velocity")</code></pre>
-</div>
+</body>
+</html>
