@@ -77,8 +77,23 @@
 
     <h3>X-Axis Test</h3>
     <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
-    <pre><code>// Placeholder - X Axis Logging
-print("Logging IMU X-axis")</code></pre>
+    <pre><code>// X-Axis Acceleration Logging Summary
+// Average Reading: 9.7515 m/s²
+
+/*
+  This test confirms the stability and accuracy of the accelerometer 
+  along the X-axis while stationary. A consistent average reading 
+  near 9.81 m/s² (Earth's gravity) indicates reliable sensor performance.
+
+  The sensor was mounted with the X-axis aligned vertically, 
+  logging data for 10 minutes through an STM32 controller. 
+  Data anomalies and spikes were filtered out during analysis to 
+  reflect true static behavior.
+
+  Note: Minor deviations may result from external vibrations, 
+  environmental noise, or data logging limitations.
+*/
+</code></pre>
 
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
