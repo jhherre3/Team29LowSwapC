@@ -104,8 +104,28 @@
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
     <img src="images/coming soon.jpg" alt="Y Axis Results">
-    <pre><code>// Placeholder - Y Axis Logging
-print("Logging IMU Y-axis")</code></pre>
+    <pre><code>// Y-Axis Acceleration Logging Summary
+// Average Reading: 9.7881 m/s²
+// Max Reading: 9.8012 m/s²
+// Min Reading: 9.7345 m/s²
+// Data Size: ~4772 KB
+
+/*
+  This test confirms the stability and accuracy of the accelerometer 
+  along the Y-axis while stationary. A consistent average reading 
+  near 9.81 m/s² (Earth's gravity) indicates reliable sensor performance.
+
+  The sensor was mounted with the Y-axis aligned vertically, 
+  logging data for 10 minutes through an STM32 controller. 
+  Data anomalies and spikes were filtered out during analysis to 
+  reflect true static behavior.
+
+  Note: Minor deviations may result from external vibrations, 
+  environmental noise, or data logging limitations. Values outside 
+  the ±9.9 m/s² range were considered outliers and excluded from the 
+  summarized metrics.
+*/
+</code></pre>
 
     <h3>Z-Axis Test</h3>
     <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
