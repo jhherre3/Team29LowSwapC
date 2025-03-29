@@ -48,7 +48,6 @@
     <a href="#imu" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">IMU</a>
     <a href="#design" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Design</a>
     <a href="#results" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Testing</a>
-    <a href="#demo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Demo</a>
     <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Team</a>
   </div>
 </nav>
@@ -56,10 +55,14 @@
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Page Content -->
-<div class="w3-main" style="margin-left:300px;margin-right:40px">
+<div class="w3-main w3-padding" style="margin-left:300px;margin-right:40px">
 
 
-  
+  <div class="w3-container" id="design" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>System Design</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>This section will detail the full design overview of the flight controller system architecture including layout, component integration, and modularity benefits. [Details will be added soon]</p>
+  </div>
 
   <div class="w3-container" style="margin-top:80px" id="summary">
     <h1 class="w3-xxxlarge w3-text-red"><b>Project Summary</b></h1>
@@ -80,24 +83,10 @@
     <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Acceleration is a strong indicator of IMU accuracy. Because gravity is constant (~9.81 m/s²), it provides a reference when the device is stationary. Our upcoming visualizations will compare raw acceleration data with expected baseline values. Velocity will be estimated by discrete integration in follow-up testing.</p>
-    <img src="images/coming soon.jpg" alt="IMU Demo GIF">
-    <img src="images/coming soon.jpg" alt="IMU Accel Snapshot">
-    <div>
-  <h3>X-Axis Test</h3>
-  <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
-  <pre><code>// Placeholder - X Axis Logging
-print("Logging IMU X-axis")</code></pre>
-
-  <h3>Y-Axis Test</h3>
-  <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
-  <pre><code>// Placeholder - Y Axis Logging
-print("Logging IMU Y-axis")</code></pre>
-
-  <h3>Z-Axis Test</h3>
-  <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
-  <pre><code>// Placeholder - Z Axis Logging
-print("Logging IMU Z-axis")</code></pre>
-</div>
+    <div class="side-by-side">
+      <img src="images/test/IMU test GIF.gif" alt="IMU Demo GIF">
+      <img src="images/test/test for x g constant.jpg" alt="IMU Accel Snapshot">
+    </div>
   </div>
 
   <div class="w3-container" id="results" style="margin-top:75px">
@@ -107,47 +96,22 @@ print("Logging IMU Z-axis")</code></pre>
     <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
     <p>Each axis (X, Y, Z) was held stationary for 10 minutes with data logged through the STM32 while powered via USB.</p>
 
-    <img src="images/coming soon.jpg" alt="X Axis Results">
-    <img src="images/coming soon.jpg" alt="Y Axis Results">
-    <img src="images/coming soon.jpg" alt="Z Axis Results">
-
+    <h3>X-Axis Test</h3>
+    <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
     <pre><code>// Placeholder - X Axis Logging
-print("Logging IMU X-axis")
-
-// Placeholder - Y Axis Logging
-print("Logging IMU Y-axis")
-
-// Placeholder - Z Axis Logging
-print("Logging IMU Z-axis")</code></pre>
-    <div>
-  <h3>X-Axis Test</h3>
-  <img src="images/test/test for x g constant.jpg" alt="X Axis Results" class="crop-image">
-  <pre><code>// Placeholder - X Axis Logging
 print("Logging IMU X-axis")</code></pre>
 
-  <h3>Y-Axis Test</h3>
-  <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
-  <pre><code>// Placeholder - Y Axis Logging
-print("Logging IMU Y-axis")</code></pre>
-
-  <h3>Z-Axis Test</h3>
-  <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
-  <pre><code>// Placeholder - Z Axis Logging
-print("Logging IMU Z-axis")</code></pre>
-</div>
-  <div>
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
+    <img src="images/coming soon.jpg" alt="Y Axis Results">
     <pre><code>// Placeholder - Y Axis Logging
 print("Logging IMU Y-axis")</code></pre>
-  </div>
-  <div>
+
     <h3>Z-Axis Test</h3>
     <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
+    <img src="images/coming soon.jpg" alt="Z Axis Results">
     <pre><code>// Placeholder - Z Axis Logging
 print("Logging IMU Z-axis")</code></pre>
-  </div>
-</div>
 
     <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
     <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
@@ -172,25 +136,17 @@ print("Integrating IMU Z for velocity")</code></pre>
   </div>
 
   <!-- Team Section -->
-  <div class="w3-container" id="demo" style="margin-top:75px">
-  <h1 class="w3-xxxlarge w3-text-red"><b>Real World Demo</b></h1>
-  <hr style="width:50px;border:5px solid red" class="w3-round">
-  <p>This section will feature a real-world test flight with the controller mounted on another drone, as well as CAD imagery.</p>
-  <img src="images/coming soon.jpg" alt="Flight Test Demo">
-  <img src="images/coming soon.jpg" alt="CAD Visuals">
-</div>
-
-<div class="w3-container" id="team" style="margin-top:75px">
+  <div class="w3-container" id="team" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <img src="images/teampic.png" alt="Team Photo">
     <table>
       <tr><th>Name</th><th>Role</th><th>Contributions</th></tr>
-      <tr><td>Ethan Y.</td><td>Firmware</td><td>Worked on firmware testing and debugging, particularly in relation to betaflight and firmware integration. Conducted research on communication protocols and system behavior.</td></tr>
-      <tr><td>Anthony A.</td><td>Firmware</td><td>Focused on firmware development and validation, including SD card functionality testing. Supported integration of sensors and contributed to overall firmware stability.</td></tr>
-      <tr><td>Tristin R.</td><td>Case Design</td><td>Designed the enclosure and mechanical layout. Researched material options to ensure durability and manufacturability of the housing. Produced CAD models for prototyping.</td></tr>
-      <tr><td>Jeremiah H.</td><td>Hardware</td><td>Led hardware development including sensor integration, PCB prototyping, and system testing. Also contributed to team coordination and overall system design strategy.</td></tr>
-      <tr><td>Saif E.</td><td>Support</td><td>Assisted in technical research, ensured accuracy of documentation, and provided support across multiple subsystems during design and redesign phases.</td></tr>
+      <tr><td>Ethan Y.</td><td>Firmware</td><td>Debugged firmware, protocol research</td></tr>
+      <tr><td>Anthony A.</td><td>Firmware</td><td>Sensor integration, SD logging</td></tr>
+      <tr><td>Tristin R.</td><td>Case Design</td><td>CAD, enclosure prototyping</td></tr>
+      <tr><td>Jeremiah H.</td><td>Hardware</td><td>Sensor testing, PCB design</td></tr>
+      <tr><td>Saif E.</td><td>Support</td><td>Subsystem documentation</td></tr>
     </table>
   </div>
 
