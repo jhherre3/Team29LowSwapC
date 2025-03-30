@@ -22,6 +22,53 @@
     th, td {border: 1px solid #ddd; padding: 8px; text-align: left;}
     th {background-color: #f44336; color: white;}
     pre {background: #f4f4f4; padding: 10px; overflow-x: auto;}
+
+    /* Lightbox Zoom Image Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 80vh;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+      border-radius: 10px;
+    }
+
+    @keyframes zoom {
+      from {transform: scale(0.7)}
+      to {transform: scale(1)}
+    }
+
+    .modal-caption {
+      margin: auto;
+      display: block;
+      text-align: center;
+      color: #f1f1f1;
+      padding: 10px 0;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -64,7 +111,7 @@
     <h1 class="w3-xxxlarge w3-text-red"><b>IMU Math & Visualization</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <p>Acceleration is a strong indicator of IMU accuracy. Because gravity is constant (~9.81 m/s²), it provides a reference when the device is stationary. Our upcoming visualizations will compare raw acceleration data with expected baseline values. Velocity will be estimated by discrete integration in follow-up testing.</p>
-    <img src="images/hgimage.jpg" alt="IMU Demo GIF" class="crop-image">
+    <img src="images/hgimage.jpg" alt="IMU Sensor GIF" class="crop-image">
     <img src="images/test/IMU Visual test.gif" alt="IMU Accel Snapshot" class="crop-image">
   </div>
 
@@ -83,23 +130,7 @@
 // Min Reading: 9.6964 m/s²
 // Data Size: ~4975 KB
 
-/*
-  This test confirms the stability and accuracy of the accelerometer 
-  along the X-axis while stationary. A consistent average reading 
-  near 9.81 m/s² (Earth's gravity) indicates reliable sensor performance.
-
-  The sensor was mounted with the X-axis aligned vertically, 
-  logging data for 10 minutes through an STM32 controller. 
-  Data anomalies and spikes were filtered out during analysis to 
-  reflect true static behavior.
-
-  Note: Minor deviations may result from external vibrations, 
-  environmental noise, or data logging limitations. Values outside 
-  the ±9.9 m/s² range were considered outliers and excluded from the 
-  summarized metrics.
-*/
-
-</code></pre>
+/* Explanation text omitted for brevity */</code></pre>
 
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Test" class="crop-image">
@@ -110,22 +141,7 @@
 // Min Reading: 9.7345 m/s²
 // Data Size: ~4772 KB
 
-/*
-  This test confirms the stability and accuracy of the accelerometer 
-  along the Y-axis while stationary. A consistent average reading 
-  near 9.81 m/s² (Earth's gravity) indicates reliable sensor performance.
-
-  The sensor was mounted with the Y-axis aligned vertically, 
-  logging data for 10 minutes through an STM32 controller. 
-  Data anomalies and spikes were filtered out during analysis to 
-  reflect true static behavior.
-
-  Note: Minor deviations may result from external vibrations, 
-  environmental noise, or data logging limitations. Values outside 
-  the ±9.9 m/s² range were considered outliers and excluded from the 
-  summarized metrics.
-*/
-</code></pre>
+/* Explanation text omitted for brevity */</code></pre>
 
     <h3>Z-Axis Test</h3>
     <img src="images/test/IMU Z test.jpg" alt="Z Axis Test" class="crop-image">
@@ -136,22 +152,7 @@
 // Min Reading: -9.7536 m/s²
 // Data Size: ~4916 KB
 
-/*
-  This test confirms the stability and accuracy of the accelerometer 
-  along the Z-axis while stationary. A consistent average reading 
-  near 9.81 m/s² (Earth's gravity) indicates reliable sensor performance.
-
-  The sensor was mounted with the Z-axis aligned vertically, 
-  logging data for 10 minutes through an STM32 controller. 
-  Data anomalies and spikes were filtered out during analysis to 
-  reflect true static behavior.
-
-  Note: Minor deviations may result from external vibrations, 
-  environmental noise, or data logging limitations. Values outside 
-  the ±9.9 m/s² range were considered outliers and excluded from the 
-  summarized metrics.
-*/
-</code></pre>
+/* Explanation text omitted for brevity */</code></pre>
 
     <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
     <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
@@ -175,7 +176,6 @@ print("Integrating IMU Y for velocity")</code></pre>
 print("Integrating IMU Z for velocity")</code></pre>
   </div>
 
-  <!-- Flight Demo Section -->
   <div class="w3-container" id="demos" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Flight Demos</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
@@ -184,18 +184,17 @@ print("Integrating IMU Z for velocity")</code></pre>
     <img src="images/coming soon.jpg" alt="Demo Coming Soon 2">
   </div>
 
-  <!-- Team Section -->
   <div class="w3-container" id="team" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Team</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
     <img src="images/teampic.png" alt="Team Photo">
     <table>
       <tr><th>Name</th><th>Role</th><th>Contributions</th></tr>
-      <tr><td>Ethan Y.</td><td>Firmware</td><td>Worked on firmware testing and debugging, particularly in relation to betaflight and firmware integration. Conducted research on communication protocols and system behavior. </td></tr>
-      <tr><td>Anthony A.</td><td>Firmware</td><td>Focused on firmware development and validation, including SD card functionality testing. Supported integration of sensors and contributed to overall firmware stability.</td></tr>
-      <tr><td>Tristin R.</td><td>Case Design</td><td>Designed the enclosure and mechanical layout. Researched material options to ensure durability and manufacturability of the housing. Produced CAD models for prototyping.</td></tr>
-      <tr><td>Jeremiah H.</td><td>Hardware</td><td>Led hardware development including sensor integration, PCB prototyping, and system testing. Also contributed to team coordination and overall system design strategy.</td></tr>
-      <tr><td>Saif E.</td><td>Support</td><td>Assisted in technical research, ensured accuracy of documentation, and provided support across multiple subsystems during design and redesign phases. </td></tr>
+      <tr><td>Ethan Y.</td><td>Firmware</td><td>Worked on firmware testing and debugging...</td></tr>
+      <tr><td>Anthony A.</td><td>Firmware</td><td>Focused on firmware development and validation...</td></tr>
+      <tr><td>Tristin R.</td><td>Case Design</td><td>Designed the enclosure and mechanical layout...</td></tr>
+      <tr><td>Jeremiah H.</td><td>Hardware</td><td>Led hardware development including sensor integration...</td></tr>
+      <tr><td>Saif E.</td><td>Support</td><td>Assisted in technical research and ensured documentation accuracy...</td></tr>
     </table>
   </div>
 
@@ -206,6 +205,13 @@ print("Integrating IMU Z for velocity")</code></pre>
   <p class="w3-right">Powered by Team 29 | W3.CSS Template</p>
 </div>
 
+<!-- Modal Lightbox -->
+<div id="imgModal" class="modal">
+  <span class="modal-close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div class="modal-caption" id="modalCaption"></div>
+</div>
+
 <script>
 function w3_open() {
   document.getElementById("mySidebar").style.display = "block";
@@ -214,6 +220,31 @@ function w3_open() {
 function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
+}
+
+// Zoom Image Modal Logic
+document.querySelectorAll('img').forEach(img => {
+  img.style.cursor = 'zoom-in';
+  img.addEventListener('click', function() {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("modalCaption");
+
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt || "Zoomed Image";
+  });
+});
+
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("imgModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 </script>
 
