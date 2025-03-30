@@ -23,7 +23,6 @@
     th {background-color: #f44336; color: white;}
     pre {background: #f4f4f4; padding: 10px; overflow-x: auto;}
 
-    /* Lightbox Zoom Image Modal */
     .modal {
       display: none;
       position: fixed;
@@ -36,7 +35,6 @@
       overflow: auto;
       background-color: rgba(0,0,0,0.9);
     }
-
     .modal-content {
       margin: auto;
       display: block;
@@ -46,12 +44,10 @@
       animation-duration: 0.6s;
       border-radius: 10px;
     }
-
     @keyframes zoom {
       from {transform: scale(0.7)}
       to {transform: scale(1)}
     }
-
     .modal-caption {
       margin: auto;
       display: block;
@@ -59,7 +55,6 @@
       color: #f1f1f1;
       padding: 10px 0;
     }
-
     .modal-close {
       position: absolute;
       top: 20px;
@@ -120,30 +115,40 @@
     <hr style="width:50px;border:5px solid red" class="w3-round">
 
     <h2 class="w3-xlarge w3-text-red">Serial Output & Sensor Fusion Results</h2>
-    <p>IMU data is being visualized through CircuitPython for interpretation. Each image demonstrates that the IMU can accurately read acceleration across all axes, as well as relative altitude and temperature.</p>
+    <p>
+      IMU data is being visualized through CircuitPython for interpretation.  
+      Each image demonstrates that the IMU can accurately read acceleration across all axes, as well as relative altitude and temperature.
+    </p>
 
     <h3>X-Axis Test</h3>
-    <img src="images/test/Xg constant.png" alt="X Axis Results" class="crop-image">
-    <pre><code><h2 class="w3-xlarge w3-text-red">Serial Output & Sensor Fusion Results</h2>
-<p>
-  IMU data is being visualized through CircuitPython for interpretation.  
-  Each image demonstrates that the IMU can accurately read acceleration across all axes, as well as relative altitude and temperature.
-</p>
-
-<h3>X-Axis Test</h3>
-<img src="images/test/Xg constant.png" alt="X Axis Results" class="crop-image" style="cursor: zoom-in;" onclick="window.open(this.src)">
-<pre><code>// X-Axis </code></pre>
+    <img src="images/test/Xg constant.png" alt="X Axis Results" class="crop-image" onclick="window.open(this.src)">
+    <pre><code>
+// Sample Serial Output Format:
+// G: 0.01, 0.02, 0.00   A: 9.75, 0.12, 0.08   ALT: 1.23m   TEMP: 24.6°C
+//
+// G = Gyroscope (°/s) readings per axis
+// A = Accelerometer (m/s²) readings per axis
+// ALT = Relative Altitude
+// TEMP = Onboard sensor temperature
+//
+// Gravity is expected to dominate one axis depending on orientation.
+// In this test, the X-axis is vertically aligned, so ~9.8 m/s² is expected on Ax.
+// Small deviations result from noise or environmental factors.
+// Click the image above to zoom in and examine detailed results.
+    </code></pre>
 
     <h3>Y-Axis Test</h3>
     <img src="images/test/Yg constant.png" alt="Y Axis Results" class="crop-image">
-    <pre><code>// Image shows Y axis results */</code></pre>
-
+    <pre><code>// Image shows Y axis results
+// Similar expectations apply with gravity reading on the Y-axis.
+    </code></pre>
 
     <h3>Z-Axis Test</h3>
-    <img src="images/test/Zg constant.png" alt="Y Axis Results" class="crop-image">
-    <pre><code>// Image shows Z axis results */</code></pre>
-    
-    
+    <img src="images/test/Zg constant.png" alt="Z Axis Results" class="crop-image">
+    <pre><code>// Image shows Z axis results
+// Z-axis should register ~9.8 m/s² when facing downward.
+    </code></pre>
+
     <h2 class="w3-xlarge w3-text-red">Sensor Reliability Testing – Acceleration</h2>
     <p>Each axis (X, Y, Z) was held stationary for 10 minutes with data logged through the STM32 while powered via USB.</p>
 
@@ -154,8 +159,7 @@
 // Max Reading: 9.8393 m/s²
 // Min Reading: 9.6964 m/s²
 // Data Size: ~4975 KB
-
-/* Explanation text omitted for brevity */</code></pre>
+    </code></pre>
 
     <h3>Y-Axis Test</h3>
     <img src="images/test/IMU Y test.jpg" alt="Y Axis Results" class="crop-image">
@@ -164,8 +168,7 @@
 // Max Reading: 9.8012 m/s²
 // Min Reading: 9.7345 m/s²
 // Data Size: ~4772 KB
-
-/* Explanation text omitted for brevity */</code></pre>
+    </code></pre>
 
     <h3>Z-Axis Test</h3>
     <img src="images/test/IMU Z test.jpg" alt="Z Axis Results" class="crop-image">
@@ -174,8 +177,7 @@
 // Max Reading: -9.8107 m/s²
 // Min Reading: -9.7536 m/s²
 // Data Size: ~4916 KB
-
-/* Explanation text omitted for brevity */</code></pre>
+    </code></pre>
 
     <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
     <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
@@ -183,20 +185,17 @@
     <h3>X-Axis Velocity</h3>
     <img src="images/coming soon.jpg" alt="X Velocity Test" class="crop-image">
     <img src="images/coming soon.jpg" alt="X Velocity Result" class="crop-image">
-    <pre><code>// Placeholder - X Velocity Calc
-print("Integrating IMU X for velocity")</code></pre>
+    <pre><code>print("Integrating IMU X for velocity")</code></pre>
 
     <h3>Y-Axis Velocity</h3>
     <img src="images/coming soon.jpg" alt="Y Velocity Test" class="crop-image">
     <img src="images/coming soon.jpg" alt="Y Velocity Result" class="crop-image">
-    <pre><code>// Placeholder - Y Velocity Calc
-print("Integrating IMU Y for velocity")</code></pre>
+    <pre><code>print("Integrating IMU Y for velocity")</code></pre>
 
     <h3>Z-Axis Velocity</h3>
     <img src="images/coming soon.jpg" alt="Z Velocity Test" class="crop-image">
     <img src="images/coming soon.jpg" alt="Z Velocity Result" class="crop-image">
-    <pre><code>// Placeholder - Z Velocity Calc
-print("Integrating IMU Z for velocity")</code></pre>
+    <pre><code>print("Integrating IMU Z for velocity")</code></pre>
   </div>
 
   <div class="w3-container" id="demos" style="margin-top:75px">
@@ -220,7 +219,6 @@ print("Integrating IMU Z for velocity")</code></pre>
       <tr><td>Saif E.</td><td>Support</td><td>Assisted in technical research and ensured documentation accuracy...</td></tr>
     </table>
   </div>
-
 </div>
 
 <!-- Footer -->
@@ -244,25 +242,20 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
-
-// Zoom Image Modal Logic
 document.querySelectorAll('img').forEach(img => {
   img.style.cursor = 'zoom-in';
   img.addEventListener('click', function() {
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("modalImage");
     const captionText = document.getElementById("modalCaption");
-
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt || "Zoomed Image";
   });
 });
-
 function closeModal() {
   document.getElementById("imgModal").style.display = "none";
 }
-
 window.onclick = function(event) {
   const modal = document.getElementById("imgModal");
   if (event.target == modal) {
