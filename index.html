@@ -246,24 +246,24 @@
 */
 
     </code></pre>
-<!--
-    <h2 class="w3-xlarge w3-text-red">Planned Testing – Linear Velocity</h2>
-    <p>Velocity tests will involve calculated movement trials over known distances and durations, integrating acceleration over time.</p>
 
-    <h3>X-Axis Velocity</h3>
-    <img src="images/coming soon.jpg" alt="X Velocity Test" class="crop-image">
-    <img src="images/coming soon.jpg" alt="X Velocity Result" class="crop-image">
-    <pre><code>print("Integrating IMU X for velocity")</code></pre>
+    <h2 class="w3-xlarge w3-text-red">IMU Gyro Bias Testing</h2>
+    <p>This test compares the gyroscopic data from the HGuide IMU against a standard off-the-shelf MPU6050 IMU. The purpose of the test is to evaluate the gyro bias and stability of each sensor by analyzing their outputs while stationary.</p>
 
-    <h3>Y-Axis Velocity</h3>
-    <img src="images/coming soon.jpg" alt="Y Velocity Test" class="crop-image">
-    <img src="images/coming soon.jpg" alt="Y Velocity Result" class="crop-image">
-    <pre><code>print("Integrating IMU Y for velocity")</code></pre>
+    <h3>MPU6050 Gyroscope Bias Test</h3>
+    <img src="images/test/mpu6050gyrobiastest.jpg" alt="MPU6050 and STM32" class="crop-image">
+    <img src="images/test/gyro_bias_plot.png" alt="MPU6050 Gyroscope Bias Analysis Result" class="crop-image">
+   <pre><code>print("The MPU6050 gyroscope bias test shows low standard deviation values, indicating stable and reliable measurements. However, the mean bias values reveal an offset from zero, especially on the Z-axis, meaning the sensor is less accurate. Overall, the MPU6050 provides consistent readings suitable for basic applications, but benefits from calibration to correct bias.")</code></pre>
 
-    <h3>Z-Axis Velocity</h3>
-    <img src="images/coming soon.jpg" alt="Z Velocity Test" class="crop-image">
-    <img src="images/coming soon.jpg" alt="Z Velocity Result" class="crop-image">
-    <pre><code>print("Integrating IMU Z for velocity")</code></pre> -->
+
+    <h3>HGuide IMU Gyroscope Bias Test (Using data collected from acceleration tests.)</h3>
+    <img src="images/test/test for x g constant.jpg" alt="HGuide IMU Test Setup" class="crop-image">
+    <img src="images/test/HGuidegyrox.png" alt="HGuide IMU Gyroscope Bias Analysis" class="crop-image">
+    <pre><code>print("The HGuide IMU gx-axis results show that the gyroscope readings are closely centered around zero with minimal deviation. Most of the data remains tightly packed near 0 degrees/sec, indicating excellent bias stability. Occasional small peaks are present, but they are rare and not significantly large, showing that the HGuide IMU provides highly stable and accurate gyroscopic measurements along the x-axis.")</code></pre>
+
+
+    
+
   </div>
 
   <div class="w3-container" id="demos" style="margin-top:75px">
